@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       
+            <meta charset=""UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Laptop Price Prediction</title>
+    </head>
+
+    <style type="text/css">
+      body{
+         background-color: #34495e;
+        }
+      #container{
+          max-width:400px;
+           margin:auto;
+           background-color:  #979a9a ;
+        }
+
+    </style>
+    <body>
+    <div id="container">
+       <h2 class="tesxt-md-center" align="center">Laptop Price Predictor</h2><br>
+
+                                <form action="{{url_for('predict')}}" method="POST">
+                                    <br>
+                                    <div>
+                                    <label>Brand</label>
+                                    <select name="brand">
+                                        <optgroup>
+                                            <option>Apple</option>
+                                            <option>HP</option>
+                                            <option>Acer</option>
+                                            <option>Asus</option>
+                                            <option>Dell</option>
+                                            <option>Lenovo</option>
+                                            <option>Chuwi</option>
+                                            <option>MSI</option>
+                                            <option>Microsoft</option>
+                                            <option>Toshiba</option>
+                                            <option>Huawei</option>
+                                            <option>Xiaomi</option>
+                                            <option>Vero</option>
+                                            <option>Razer</option>
+                                            <option>Mediacom</option>
+                                            <option>Samsung</option>
+                                            <option>Google</option>
+                                            <option>LG</option>
+                                            <option>Fujitsu</option>
+                                        </optgroup>
+                                    </select><br>
+                                    </div>
+                                    <br>
+                                    <div>
+                                        <label>Laptop Type</label>
+                                    <select name="type">
+                                        <optgroup>
+                                            <option>Notebook</option>
+                                            <option>Gaming</option>
+                                            <option>Ultrabook</option>
+                                            <option>2 in 1 Convertible</option>
+                                            <option>Workstation</option>
+                                            <option>Netbook</option>
+                                        </optgroup>
+                                    </select><br>
+                                        </div>
+                                    <br>
+                                    <div>
+                                    <label>Ram(in GB)</label>
+                                    <select name="ram">
+                                        <optgroup>
+                                            <option>2</option>
+                                            <option>4</option>
+                                            <option>6</option>
+                                            <option>8</option>
+                                            <option>12</option>
+                                            <option>16</option>
+                                            <option>24</option>
+                                            <option>32</option>
+                                            <option>64</option>
+                                        </optgroup>
+                                    </select><br>
+                                        </div>
+                                    <br>
+                                    <div>
+                                    <label>GPU</label>
+                                    <select name="gpu">
+                                        <optgroup>
+                                            <option>Intel</option>
+                                            <option>Nvidia</option>
+                                            <option>AMD</option>
+                                           
+                                        </optgroup>
+                                    </select><br>
+                                        </div>
+                                    <br>
+                                    <div>
+                                    <label>Operating System</label>
+                                    <select name="os">
+                                        <optgroup>
+                                            <option>Windows</option>
+                                            <option>Linux</option>
+                                            <option>Chrome OS</option>
+                                            <option>Mac OS</option>
+                                            <option>Other</option>
+                                        </optgroup>
+                                    </select><br>
+                                        </div>
+                                    <br>
+                                    <div>
+                                    <label>Weight</label>
+                                    <input type="text" name="weight" class="from control"><br>
+                                        </div>
+                                    <br>
+                                    <div>
+                                    <label>Touch Screen</label>
+                                    <select name="touch">
+                                        <optgroup>
+                                            <option>Yes</option>
+                                            <option>No</option>
+                                        </optgroup>
+                                    </select><br>
+                                        </div>
+                                    <br>
+                                    <div>
+                                    <label>IPS Display</label>
+                                    <select name="ips">
+                                        <optgroup>
+                                            <option>Yes</option>
+                                            <option>No</option>
+                                        </optgroup>
+                                    </select><br>
+                                        </div>
+                                    <br>
+                                    <div>
+                                    <label>Screen size</label>
+                                    <input type="text" name="size" class="from control"><br>
+                                    </div>
+                                    <br>
+                                    <div>
+                                    <label>Processor</label>
+                                    <select name="processor ">
+                                        <optgroup>
+                                            <option>Intel Core i3</option>
+                                            <option>Intel Core i5</option>
+                                            <option>Intel Core i7</option>
+                                            <option>AMD Processor</option>
+                                            <option>Other Intel Processor</option>
+                                           
+                                        </optgroup>
+                                    </select><br>
+                                        </div>
+                                    <br>
+                                    <div>
+                                    <label>Clock Speed</label>
+                                    <input type="text" name="clock" class="form control"><br>
+                                        </div>
+                                    <br>
+                                    <div>
+                                    <label>Screen Resolution</label>
+                                    <select name="screen">
+                                        <optgroup>
+                                            <option>3840x2160</option>
+                                            <option>1600x900</option>
+                                            <option>1366x768</option>
+                                            <option>1920x1080</option>
+                                             <option>2560x1600</option>
+                                            <option>2560x1440</option>
+                                            <option>2304x1440</option>
+                                             <option>2880x1800</option>
+                                             <option>3200x1800</option>
+                                        </optgroup>
+                                    </select><br>
+                                        </div>
+                                    <br>
+                                    <div>
+                                    <label>Memory Type</label>
+                                    <select name="mem_type">
+                                        <optgroup>
+                                            <option>SSD</option>
+                                            <option>HDD</option>
+                                            <option>Hybrid</option>
+                                            <option>Flash</option>
+                                        </optgroup>
+                                    </select><br>
+                                        </div>
+                                    <br>
+                                    <div>
+                                    <label>Memory Capacity(in GB)</label>
+                                    <input type="number" name="mem" class="form control">
+                                        </div>
+                                    <br>
+                                    <div>
+                                    <button type="submit" name="Predict" class="allign-center">Predict</button>
+                                        </div>
+                                </form>
+        <h3>{{prediction_text}}</h3>
+ </div>
+    </body>
+   
+</html>
